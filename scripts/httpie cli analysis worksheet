@@ -1,0 +1,273 @@
+# HTTPie CLI GitLens Analysis Worksheet
+
+Use this worksheet to systematically analyze the HTTPie CLI repository using GitLens. Fill in your findings as you explore the codebase.
+
+## Repository Overview
+
+**Clone the repository first**: `git clone https://github.com/httpie/cli.git`
+
+### Basic Statistics (Use GitLens Repository View)
+- **Total Commits**: _____________
+- **Contributors**: _____________
+- **First Commit Date**: _____________
+- **Most Recent Commit**: _____________
+- **Main Branch**: _____________
+- **Repository Size**: _____________
+
+## Core Function Analysis
+
+### 1. Main Entry Point (`httpie/core.py`)
+
+#### Function: `main()`
+**GitLens Investigation Steps:**
+1. Navigate to `httpie/core.py`
+2. Find the `main()` function
+3. Check inline blame annotations
+4. Click on Code Lens above the function
+5. Right-click → "Open Line History"
+
+**Findings:**
+- **Original Author**: _____________
+- **Creation Date**: _____________
+- **Last Modified**: _____________
+- **Last Modified By**: _____________
+- **Total Modifications**: _____________
+
+**Key Changes (from Line History):**
+1. _____________
+2. _____________
+3. _____________
+
+#### Function: `get_response()`
+- **Original Author**: _____________
+- **Creation Date**: _____________
+- **Purpose**: _____________
+- **Major Refactors**: _____________
+
+### 2. CLI Argument Parsing (`httpie/cli/arguments.py`)
+
+#### Class: `ArgumentParser`
+**Analysis:**
+- **Original Implementation**: _____________
+- **Key Contributors**: _____________
+- **Evolution Pattern**: _____________
+
+**Feature Additions Timeline:**
+- **Basic arguments**: _____________
+- **Auth options**: _____________
+- **Output formatting**: _____________
+- **Session support**: _____________
+
+### 3. Output Formatting (`httpie/output/formatters/json.py`)
+
+#### Class: `JSONFormatter`
+**Use GitLens to find:**
+- **Original Author**: _____________
+- **Implementation Date**: _____________
+- **Performance Improvements**: _____________
+
+**Evolution Analysis:**
+1. **Initial Implementation**: _____________
+2. **Pretty Printing**: _____________
+3. **Color Support**: _____________
+4. **Performance Optimizations**: _____________
+
+## Feature Evolution Analysis
+
+### 1. Plugin System (`httpie/plugins/`)
+
+**Directory Analysis:**
+- **When was the plugin directory created?**: _____________
+- **Who implemented the plugin architecture?**: _____________
+- **First plugin added**: _____________
+
+**Key Files to Analyze:**
+- `__init__.py` - **Author**: _____________ **Date**: _____________
+- `base.py` - **Author**: _____________ **Date**: _____________
+- `manager.py` - **Author**: _____________ **Date**: _____________
+
+### 2. Authentication (`httpie/plugins/auth/`)
+
+**Auth Methods Implementation Timeline:**
+1. **Basic Auth** (`basic.py`):
+   - Author: _____________
+   - Date: _____________
+   - Commit: _____________
+
+2. **Digest Auth** (`digest.py`):
+   - Author: _____________
+   - Date: _____________
+   - Commit: _____________
+
+3. **Custom Auth Support**:
+   - When added: _____________
+   - Key contributor: _____________
+
+### 3. Session Support (`httpie/sessions.py`)
+
+**Session Analysis:**
+- **Original Implementation**: _____________
+- **Author**: _____________
+- **Major Enhancements**: _____________
+
+**Session Features Timeline:**
+- **Basic sessions**: _____________
+- **Named sessions**: _____________
+- **Session persistence**: _____________
+
+## Contributor Analysis
+
+### Top 5 Contributors (Use GitLens Search → Authors)
+
+1. **[Name]**: _____________
+   - **Commits**: _____________
+   - **Specialization**: _____________
+   - **Active Period**: _____________
+
+2. **[Name]**: _____________
+   - **Commits**: _____________
+   - **Specialization**: _____________
+   - **Active Period**: _____________
+
+3. **[Name]**: _____________
+   - **Commits**: _____________
+   - **Specialization**: _____________
+   - **Active Period**: _____________
+
+4. **[Name]**: _____________
+   - **Commits**: _____________
+   - **Specialization**: _____________
+   - **Active Period**: _____________
+
+5. **[Name]**: _____________
+   - **Commits**: _____________
+   - **Specialization**: _____________
+   - **Active Period**: _____________
+
+### Contribution Patterns
+
+**Most Active Periods:**
+- **Year**: _____________ **Activity**: _____________
+- **Year**: _____________ **Activity**: _____________
+- **Year**: _____________ **Activity**: _____________
+
+**Development Phases:**
+1. **Initial Development** (2012-201X): _____________
+2. **Feature Expansion** (201X-201X): _____________
+3. **Maturation** (201X-Present): _____________
+
+## Security and Quality Evolution
+
+### SSL/TLS Implementation
+**Search for SSL-related commits:**
+- **First SSL support**: _____________
+- **Certificate verification**: _____________
+- **Security improvements**: _____________
+
+### Testing Evolution
+**Analyze test files:**
+- **First tests added**: _____________
+- **Test coverage expansion**: _____________
+- **Testing frameworks used**: _____________
+
+### Documentation Improvements
+**Track documentation commits:**
+- **Initial docs**: _____________
+- **API documentation**: _____________
+- **User guides**: _____________
+
+## Advanced GitLens Analysis
+
+### 1. Heat Map Analysis
+**Enable GitLens Heat Map and identify:**
+- **Oldest code sections**: _____________
+- **Most frequently changed areas**: _____________
+- **Recently modified hotspots**: _____________
+
+### 2. Commit Message Patterns
+**Search for specific types of commits:**
+- **Bug fixes** (search "fix", "bug"): _____________ commits
+- **Features** (search "add", "feat"): _____________ commits
+- **Refactoring** (search "refactor", "clean"): _____________ commits
+
+### 3. Release Pattern Analysis
+**Check tag history:**
+- **Release frequency**: _____________
+- **Version numbering changes**: _____________
+- **Major version milestones**: _____________
+
+## Interesting Discoveries
+
+### Unexpected Findings
+1. _____________
+2. _____________
+3. _____________
+
+### Code Quality Insights
+1. _____________
+2. _____________
+3. _____________
+
+### Community Contributions
+1. _____________
+2. _____________
+3. _____________
+
+## GitLens Features Mastery Checklist
+
+**Basic Features:**
+- [ ] Inline blame annotations
+- [ ] Current line blame info
+- [ ] Code Lens above functions
+- [ ] Hover information
+
+**Navigation Features:**
+- [ ] File History view
+- [ ] Line History view
+- [ ] Repository view
+- [ ] Branch comparison
+
+**Search and Analysis:**
+- [ ] Commit search by author
+- [ ] Commit search by message
+- [ ] File search in history
+- [ ] Compare with previous versions
+
+**Advanced Features:**
+- [ ] Heat map visualization
+- [ ] Blame annotations toggle
+- [ ] Custom date formatting
+- [ ] Repository statistics
+
+## Analysis Summary
+
+### Key Learnings About HTTPie
+1. **Architecture**: _____________
+2. **Development Process**: _____________
+3. **Community**: _____________
+
+### Key Learnings About GitLens
+1. **Most Useful Feature**: _____________
+2. **Biggest Surprise**: _____________
+3. **Best for Understanding Code**: _____________
+
+### Recommendations for Using GitLens
+1. _____________
+2. _____________
+3. _____________
+
+## Follow-up Questions for Further Investigation
+
+1. _____________
+2. _____________
+3. _____________
+4. _____________
+5. _____________
+
+---
+
+**Analysis completed on**: _____________
+**Time spent**: _____________
+**GitLens version**: _____________
+**VS Code version**: _____________
+
