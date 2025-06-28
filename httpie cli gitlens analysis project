@@ -1,0 +1,276 @@
+# HTTPie CLI GitLens Analysis Project
+
+## Project Structure
+
+```
+httpie-gitlens-analysis/
+├── README.md
+├── gitlens_insights.md
+├── analysis_results.md
+├── .vscode/
+│   ├── settings.json
+│   └── extensions.json
+├── scripts/
+│   ├── clone_repo.sh
+│   └── setup_analysis.py
+└── findings/
+    ├── core_functions.md
+    ├── contributor_analysis.md
+    └── feature_evolution.md
+```
+
+## Key Analysis Files
+
+### 1. README.md
+```markdown
+# HTTPie CLI GitLens Analysis
+
+This project demonstrates GitLens capabilities by analyzing the HTTPie CLI repository.
+
+## Repository Information
+- **URL**: https://github.com/httpie/cli
+- **Language**: Python
+- **Stars**: 30k+
+- **Contributors**: 200+
+- **First Commit**: 2012
+
+## Analysis Goals
+1. Identify key contributors and their contributions
+2. Track evolution of major features
+3. Understand code authorship patterns
+4. Analyze commit history and patterns
+
+## Getting Started
+1. Run `./scripts/clone_repo.sh` to clone HTTPie CLI
+2. Open the cloned repository in VS Code
+3. Follow the analysis guide in `gitlens_insights.md`
+```
+
+### 2. .vscode/settings.json
+```json
+{
+    "gitlens.views.repositories.files.layout": "tree",
+    "gitlens.views.fileHistory.enabled": true,
+    "gitlens.views.lineHistory.enabled": true,
+    "gitlens.currentLine.enabled": true,
+    "gitlens.currentLine.pullRequests.enabled": true,
+    "gitlens.hovers.currentLine.over": "line",
+    "gitlens.blame.highlight.enabled": true,
+    "gitlens.blame.heatmap.enabled": true,
+    "gitlens.codeLens.enabled": true,
+    "gitlens.codeLens.authors.enabled": true,
+    "gitlens.codeLens.recentChange.enabled": true,
+    "gitlens.statusBar.enabled": true,
+    "gitlens.defaultDateFormat": "MM/DD/YYYY",
+    "gitlens.defaultDateStyle": "relative",
+    "python.defaultInterpreterPath": "./venv/bin/python"
+}
+```
+
+### 3. .vscode/extensions.json
+```json
+{
+    "recommendations": [
+        "eamodio.gitlens",
+        "ms-python.python",
+        "ms-python.pylint",
+        "ms-vscode.vscode-json",
+        "github.vscode-pull-request-github"
+    ]
+}
+```
+
+### 4. scripts/clone_repo.sh
+```bash
+#!/bin/bash
+
+# Clone HTTPie CLI repository
+echo "Cloning HTTPie CLI repository..."
+git clone https://github.com/httpie/cli.git httpie-cli
+
+# Navigate to repository
+cd httpie-cli
+
+echo "Repository cloned successfully!"
+echo "Directory: $(pwd)"
+echo "Total commits: $(git rev-list --count HEAD)"
+echo "Contributors: $(git shortlog -sn | wc -l)"
+echo "First commit: $(git log --reverse --pretty=format:'%h %s' | head -1)"
+echo "Latest commit: $(git log -1 --pretty=format:'%h %s')"
+
+# Create virtual environment for Python analysis
+echo "Setting up Python environment..."
+python3 -m venv venv
+source venv/bin/activate
+pip install -e .
+
+echo "Setup complete! Open in VS Code with: code ."
+```
+
+### 5. analysis_results.md
+This file will contain your findings from the GitLens analysis:
+
+```markdown
+# HTTPie CLI Analysis Results
+
+## Core Function Analysis
+
+### 1. main() Function (httpie/core.py)
+- **Original Author**: [To be discovered]
+- **First Commit**: [To be discovered]
+- **Last Modified**: [To be discovered]
+- **Key Changes**: [To be documented]
+
+### 2. JSON Formatter (httpie/output/formatters/json.py)
+- **Original Author**: [To be discovered]
+- **Implementation Date**: [To be discovered]
+- **Evolution**: [To be documented]
+
+### 3. Authentication System (httpie/plugins/auth/)
+- **Original Implementation**: [To be discovered]
+- **Key Contributors**: [To be documented]
+- **Major Enhancements**: [To be documented]
+
+## Contributor Analysis
+
+### Top Contributors
+1. [Name] - [Contributions]
+2. [Name] - [Contributions]
+3. [Name] - [Contributions]
+
+### Contribution Patterns
+- Most active periods
+- Feature development phases
+- Maintenance vs. new features
+
+## Feature Evolution Timeline
+
+### Major Milestones
+- Plugin system introduction
+- Session support addition
+- SSL/TLS improvements
+- Output formatting enhancements
+
+## Code Quality Insights
+
+### Maintenance Patterns
+- Refactoring frequency
+- Bug fix patterns
+- Documentation updates
+
+### Development Trends
+- Code style evolution
+- Testing improvements
+- Performance optimizations
+```
+
+## Analysis Workflow
+
+### Phase 1: Repository Overview
+1. Clone the HTTPie CLI repository
+2. Explore the overall structure using GitLens Repository view
+3. Identify key directories and files
+4. Check overall commit statistics
+
+### Phase 2: Core Function Analysis
+1. Navigate to `httpie/core.py`
+2. Analyze the `main()` function:
+   - Check inline blame for authorship
+   - Use Code Lens to see recent changes
+   - Open File History to see evolution
+   - Use Line History for specific lines
+
+### Phase 3: Feature-Specific Analysis
+1. **JSON Formatting**:
+   - Examine `httpie/output/formatters/json.py`
+   - Track the evolution of JSON handling
+   - Identify performance improvements
+
+2. **Authentication System**:
+   - Analyze `httpie/plugins/auth/` directory
+   - Check when different auth methods were added
+   - Track security improvements
+
+3. **CLI Argument Parsing**:
+   - Study `httpie/cli/arguments.py`
+   - See how argument handling evolved
+   - Check for feature additions
+
+### Phase 4: Contributor Analysis
+1. Use GitLens to identify top contributors
+2. Analyze contribution patterns
+3. Check for specialization areas
+4. Document findings
+
+### Phase 5: Historical Analysis
+1. Search for major feature commits
+2. Analyze release patterns
+3. Check for significant refactoring
+4. Document evolution timeline
+
+## Specific GitLens Features to Use
+
+### 1. Blame Annotations
+- Enable file blame annotations
+- Use heat map to see code age
+- Check line-by-line authorship
+
+### 2. Code Lens
+- Review recent changes above functions
+- Check author information
+- See related commits
+
+### 3. File History
+- Track file evolution over time
+- Compare different versions
+- See major changes
+
+### 4. Search and Compare
+- Search for specific commits
+- Compare branches
+- Find when features were added
+
+### 5. Repository Views
+- Browse commit history
+- Check branch information
+- Analyze repository structure
+
+## Expected Findings
+
+Based on HTTPie's history, you should discover:
+
+1. **Original Authors**: The founding contributors
+2. **Major Features**: When plugins, sessions, and formatters were added
+3. **Evolution Patterns**: How the codebase matured
+4. **Contribution Patterns**: Community vs. core team contributions
+5. **Quality Improvements**: Testing, documentation, and refactoring efforts
+
+## Documentation Template
+
+For each analysis session, document:
+
+```markdown
+## Analysis Session: [Date]
+
+### Function/File Analyzed: [Name]
+- **Location**: [File path]
+- **Original Author**: [Name]
+- **Creation Date**: [Date]
+- **Last Modified**: [Date]
+- **Key Contributors**: [List]
+
+### Findings:
+1. [Finding 1]
+2. [Finding 2]
+3. [Finding 3]
+
+### Interesting Commits:
+- [Commit hash]: [Description]
+- [Commit hash]: [Description]
+
+### Questions Raised:
+- [Question 1]
+- [Question 2]
+```
+
+This structured approach will help you systematically analyze the HTTPie CLI codebase and learn GitLens capabilities while exploring a real-world, actively maintained open-source project.
