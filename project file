@@ -1,0 +1,22 @@
+gitlens-analysis-project/
+├── README.md
+├── gitlens_insights.md
+├── package.json
+├── .gitignore
+├── .vscode/
+│   ├── settings.json
+│   └── extensions.json
+├── src/
+│   ├── calculator.js
+│   ├── userManager.js
+│   ├── dataProcessor.js
+│   └── utils/
+│       ├── helpers.js
+│       └── validators.js
+├── tests/
+│   ├── calculator.test.js
+│   └── userManager.test.js
+├── docs/
+│   └── api.md
+└── scripts/
+    └── setup.sh
